@@ -13,7 +13,7 @@ API_KEY = "pk_f99acd61740946c9b13696784a19452e" #API Key to IEX API
 
 @app.get("/", response_class=HTMLResponse)
 async def root(request: Request):
-    return templates.TemplateResponse("Welcome.html", {"request": request})
+    return templates.TemplateResponse("welcome.html", {"request": request})
 
 
 @app.get("/stocks/{symbol}", response_class=HTMLResponse)
