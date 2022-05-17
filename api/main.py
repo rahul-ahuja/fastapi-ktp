@@ -4,6 +4,7 @@ from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
 import urllib.parse
 import requests
+import os
 
 app = FastAPI()
 
