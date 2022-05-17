@@ -84,9 +84,11 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+          API_KEY: ${{ secrets.API_KEY }}
       - name: Deploy new Lambda
         run: aws lambda update-function-code --function-name fastapi-aws-ktpv2 --s3-bucket fastapi-ktp-v2 --s3-key api.zip
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+          API_KEY: ${{ secrets.API_KEY }}
