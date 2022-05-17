@@ -8,7 +8,7 @@ import requests
 app = FastAPI()
 
 templates = Jinja2Templates(directory="templates")
-API_KEY = "pk_f99acd61740946c9b13696784a19452e" #API Key to IEX API
+API_KEY = os.environ.get("API_KEY")
 
 
 @app.get("/", response_class=HTMLResponse)
