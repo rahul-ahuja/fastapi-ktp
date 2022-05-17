@@ -74,6 +74,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+          API_KEY: ${{ secrets.API_KEY }}
       - name: Download Lambda api.zip
         uses: actions/download-artifact@v2
         with:
